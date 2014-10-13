@@ -7,7 +7,7 @@ var o = orchestrate(process.env.ORCHESTRATE_TOKEN);
 describe('#del', function() {
     it('del 1', function(done) {
         o.del('user', 1, function(err, header) {
-            expect(err).to.be.an('null');
+            expect(err).to.be.an('object');
             expect(header).to.be.an('object');
 
             done();
