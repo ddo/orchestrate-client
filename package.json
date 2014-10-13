@@ -1,0 +1,32 @@
+{
+  "name": "orchestrate-native",
+  "version": "0.0.1",
+  "description": "orchestrate.io native nodejs driver",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm i && ./node_modules/.bin/mocha -t 10000",
+    "start": "DEBUG=* node example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://ddo@github.com/ddo/orchestrate-native.git"
+  },
+  "keywords": [
+    "orchestrate"
+  ],
+  "author": "ddo <joeddo89@gmail.com> (http://ddo.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ddo/orchestrate-native/issues"
+  },
+  "homepage": "https://github.com/ddo/orchestrate-native",
+  "dependencies": {
+    "debug": "^2.0.0",
+    "fn-arg": "^1.0.0",
+    "request": "^2.45.0"
+  },
+  "devDependencies": {
+    "chai": "^1.9.2",
+    "mocha": "^1.21.5"
+  }
+}
