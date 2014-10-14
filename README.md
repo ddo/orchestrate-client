@@ -465,7 +465,7 @@ db.graph.del({
 });
 ```
 
-##[changelog](/releases)
+##[changelog](https://github.com/ddo/orchestrate-client/releases)
 
 ##testing
 
