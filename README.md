@@ -50,7 +50,7 @@ db.post('users', {
 
 read the api below for more details
 
-###api list
+###api
 
 * [ping](#ping)
 * [get](#get)
@@ -58,18 +58,18 @@ read the api below for more details
 * [put](#put)
 * [del](#del)
 
-####refs
+refs
 
 * [get](#refget)
 
-####events
+events
 
 * [get](#eventget)
 * [post](#eventpost)
 * [put](#eventput)
 * [del](#eventdel)
 
-####graph
+graph
 
 * [get](#graphget)
 * [put](#graphput)
@@ -468,6 +468,8 @@ db.graph.del({
 ###[changelog](/releases)
 
 ###testing
+
+set ``env.ORCHESTRATE_TOKEN=<your token>``
 
 ```bash
 $ npm test
