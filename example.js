@@ -88,12 +88,12 @@ var o = orchestrate(process.env.ORCHESTRATE_TOKEN);
 //     console.log(header);
 // });
 
-o.del('user', {
-    force: true
-}, function(err, header) {
-    console.log(err);
-    console.log(header);
-});
+// o.del('user', {
+//     force: true
+// }, function(err, header) {
+//     console.log(err);
+//     console.log(header);
+// });
 
 // o.put('user', 2, {
 //     name: 'ddooooooo',
