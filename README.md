@@ -11,25 +11,25 @@ npm i orchestrate-client
 
 ##usage
 
-####init
+init
 ```js
 var orchestrate = require('orchestrate-client');
 var db = orchestrate(<your token here>);
 ```
 
-####get all the users in the "users" collection
+get all the users in the "users" collection
 ```js
 db.get('users', function(err, header, users) {
 });
 ```
 
-####get the user with key = 1
+get the user with key = 1
 ```js
 db.get('users', 1, function(err, header, user) {
 });
 ```
 
-####search & limit
+search & limit
 ```js
 db.get('users', {
     query: 'name:ddo',
@@ -38,7 +38,7 @@ db.get('users', {
 });
 ```
 
-####create
+create
 ```js
 db.post('users', {
     name: 'ddo',
@@ -50,7 +50,7 @@ db.post('users', {
 
 read the api below for more details
 
-###api
+##api
 
 * [ping](#ping)
 * [get](#get)
@@ -88,7 +88,7 @@ db.ping(function(err, header) {
 
 parameters:
 
-* collection **``require``** ``string``
+* collection **``required``** ``string``
 * key ``string|number``
 * opt ``object`` option (limit, query...) check [orchestrate.io docs](http://orchestrate.io/docs/apiref)
 
@@ -129,7 +129,7 @@ db.get('users', {
 
 parameters:
 
-* collection **``require``** ``string``
+* collection **``required``** ``string``
 * data ``object``
 
 example:
@@ -155,8 +155,8 @@ db.post('user', function(err, header) {
 
 parameters:
 
-* collection **``require``** ``string``
-* key **``require``** ``string|number``
+* collection **``required``** ``string``
+* key **``required``** ``string|number``
 * data ``object``
 
 example:
@@ -176,7 +176,7 @@ db.put('user', 1, {
 
 parameters:
 
-* collection **``require``** ``string``
+* collection **``required``** ``string``
 * key ``string|number``
 * opt ``object``
 
@@ -200,8 +200,8 @@ db.del('user', {
 
 parameters:
 
-* collection **``require``** ``string``
-* key **``require``** ``string|number``
+* collection **``required``** ``string``
+* key **``required``** ``string|number``
 * ref ``string|number``
 * opt ``object``
 
@@ -231,9 +231,9 @@ db.ref.get('user', 1, {
 
 parameters:
 
-* collection **``require``** ``string``
-* key **``require``** ``string|number``
-* type **``require``** ``string``
+* collection **``required``** ``string``
+* key **``required``** ``string|number``
+* type **``required``** ``string``
 * opt ``object``
 
 example:
@@ -258,9 +258,9 @@ db.event.get('user', 1, 'login', {
 
 parameters:
 
-* collection **``require``** ``string``
-* key **``require``** ``string|number``
-* type **``require``** ``string``
+* collection **``required``** ``string``
+* key **``required``** ``string|number``
+* type **``required``** ``string``
 * timestamp ``number``
 * data ``object``
 
@@ -294,9 +294,9 @@ db.event.post('user', 1, 'login', 1413215674842, {
 
 parameters:
 
-* collection **``require``** ``string``
-* key **``require``** ``string|number``
-* type **``require``** ``string``
+* collection **``required``** ``string``
+* key **``required``** ``string|number``
+* type **``required``** ``string``
 * data ``object``
 
 example:
@@ -324,9 +324,9 @@ db.event.put('user', 1, 'login', {
 
 parameters:
 
-* collection **``require``** ``string``
-* key **``require``** ``string|number``
-* type **``require``** ``string``
+* collection **``required``** ``string``
+* key **``required``** ``string|number``
+* type **``required``** ``string``
 * opt ``object``
 
 example:
@@ -346,9 +346,9 @@ db.event.del('user', 1, 'login', {
 
 parameters:
 
-* collection **``require``** ``string``
-* key **``require``** ``string|number``
-* kind **``require``** ``string|array`` relations
+* collection **``required``** ``string``
+* key **``required``** ``string|number``
+* kind **``required``** ``string|array`` relations
 * opt ``object``
 
 example:
@@ -374,9 +374,9 @@ db.graph.get('user', 1, ['like', 'relationship'], {
 
 parameters:
 
-* from **``require``** ``object`` with collection name and key
-* kind **``require``** ``string`` relation
-* to **``require``** ``object`` with collection name and key
+* from **``required``** ``object`` with collection name and key
+* kind **``required``** ``string`` relation
+* to **``required``** ``object`` with collection name and key
 
 example:
 
@@ -410,9 +410,9 @@ db.graph.put({
 
 parameters:
 
-* from **``require``** ``object`` with collection name and key
-* kind **``require``** ``string`` relation
-* to **``require``** ``object`` with collection name and key
+* from **``required``** ``object`` with collection name and key
+* kind **``required``** ``string`` relation
+* to **``required``** ``object`` with collection name and key
 * opt ``object``
 
 example:
@@ -431,7 +431,7 @@ db.graph.del({
 });
 ```
 
-###note
+##note
 
 * you can pass to all api with 2 params: (``option``, ``callback``)
 
@@ -465,9 +465,9 @@ db.graph.del({
 });
 ```
 
-###[changelog](/releases)
+##[changelog](/releases)
 
-###testing
+##testing
 
 set ``env.ORCHESTRATE_TOKEN=<your token>``
 
