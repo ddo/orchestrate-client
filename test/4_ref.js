@@ -9,7 +9,7 @@ describe('ref', function() {
     describe('#get', function() {
 
         it('no ref', function(done) {
-            o.ref.get('user', 1, function(err, data, header) {
+            o.ref.get('user', 1, function(err, header, data) {
                 expect(err).to.be.an('null');
 
                 //for following testing
@@ -26,7 +26,7 @@ describe('ref', function() {
         });
 
         it('ref', function(done) {
-            o.ref.get('user', 1, ref, function(err, data, header) {
+            o.ref.get('user', 1, ref, function(err, header, data) {
                 expect(err).to.be.an('null');
 
                 expect(data).to.be.an('object');
@@ -39,7 +39,7 @@ describe('ref', function() {
         it('limit opt', function(done) {
             o.ref.get('user', 1, {
                 limit: 1
-            }, function(err, data, header) {
+            }, function(err, header, data) {
                 expect(err).to.be.an('null');
 
                 expect(data).to.be.an('object');
@@ -56,7 +56,7 @@ describe('ref', function() {
                 opt: {
                     limit: 1
                 }
-            }, function(err, data, header) {
+            }, function(err, header, data) {
                 expect(err).to.be.an('null');
 
                 expect(data).to.be.an('object');

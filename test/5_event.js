@@ -54,7 +54,7 @@ describe('event', function() {
     
     describe('#get', function() {
         it('no timestamp & ordinal', function(done) {
-            o.event.get('user', 1, 'login', function(err, data, header) {
+            o.event.get('user', 1, 'login', function(err, header, data) {
                 expect(err).to.be.an('null');
 
                 //for following testing
@@ -76,7 +76,7 @@ describe('event', function() {
         it('timestamp', function(done) {
             o.event.get('user', '1', 'login', {
                 timestamp: timestamp
-            }, function(err, data, header) {
+            }, function(err, header, data) {
                 expect(err).to.be.an('null');
 
                 expect(data).to.be.an('object');
@@ -93,7 +93,7 @@ describe('event', function() {
             o.event.get('user', '1', 'login', {
                 timestamp: timestamp,
                 ordinal: ordinal
-            }, function(err, data, header) {
+            }, function(err, header, data) {
                 expect(err).to.be.an('null');
 
                 expect(data).to.be.an('object');
@@ -106,7 +106,7 @@ describe('event', function() {
         it('limit opt', function(done) {
             o.event.get('user', '1', 'login', {
                 limit: 1
-            }, function(err, data, header) {
+            }, function(err, header, data) {
                 expect(err).to.be.an('null');
 
                 expect(data).to.be.an('object');
@@ -128,7 +128,7 @@ describe('event', function() {
                     timestamp: timestamp,
                     limit: 1
                 }
-            }, function(err, data, header) {
+            }, function(err, header, data) {
                 expect(err).to.be.an('null');
 
                 expect(data).to.be.an('object');

@@ -6,7 +6,7 @@ var o = orchestrate(process.env.ORCHESTRATE_TOKEN);
 
 describe('#get', function() {
     it('no key', function(done) {
-        o.get('user', function(err, data, header) {
+        o.get('user', function(err, header, data) {
             expect(err).to.be.an('null');
 
             expect(data).to.be.an('object');
@@ -33,7 +33,7 @@ describe('#get', function() {
     });
 
     it('opt limit', function(done) {
-        o.get('user', {limit: 1}, function(err, data, header) {
+        o.get('user', {limit: 1}, function(err, header, data) {
             expect(err).to.be.an('null');
 
             expect(data).to.be.an('object');
@@ -49,7 +49,7 @@ describe('#get', function() {
     it('opt startKey', function(done) {
         o.get('user', {
             startKey: '05b90d56dd20b9e9'
-        }, function(err, data, header) {
+        }, function(err, header, data) {
             expect(err).to.be.an('null');
 
             expect(data).to.be.an('object');
@@ -66,7 +66,7 @@ describe('#get', function() {
         o.get('user', {
             query: 'game:csgo',
             sort: 'value.name:asc'
-        }, function(err, data, header) {
+        }, function(err, header, data) {
             expect(err).to.be.an('null');
 
             expect(data).to.be.an('object');
@@ -87,7 +87,7 @@ describe('#get', function() {
                 query: 'game:csgo',
                 sort: 'value.name:asc'
             }
-        }, function(err, data, header) {
+        }, function(err, header, data) {
             expect(err).to.be.an('null');
 
             expect(data).to.be.an('object');

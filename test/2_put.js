@@ -33,9 +33,9 @@ describe('#put', function() {
     it('pass collection as object', function(done) {
         o.put({
             collection: 'user',
-            key: 1,
+            key: 2,
             data: {
-                name: 'ddo4',
+                name: 'ddo2',
                 age: 25,
                 game: 'csgo, dota'
             }
