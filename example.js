@@ -1,63 +1,63 @@
 var orchestrate = require('./');
 
-var o = orchestrate(process.env.ORCHESTRATE_TOKEN);
+var db = orchestrate(process.env.ORCHESTRATE_TOKEN);
 
-// o.ping(function(err, header) {
+// db.ping(function(err, header) {
 //     console.log(err);
 //     console.log(header);
 // });
 
-// o.get('user', function(err, data, header) {
-//     console.log(err);
-//     console.log(data);
-//     console.log(header);
-// });
-
-// o.get('user', 1, function(err, data, header) {
+// db.get('user', function(err, header, data) {
 //     console.log(err);
 //     console.log(data);
 //     console.log(header);
 // });
 
-// o.get('user', {limit: 1}, function(err, data, header) {
+// db.get('user', 1, function(err, header, data) {
 //     console.log(err);
 //     console.log(data);
 //     console.log(header);
 // });
 
-// o.get('user', {
+// db.get('user', {limit: 1}, function(err, header, data) {
+//     console.log(err);
+//     console.log(data);
+//     console.log(header);
+// });
+
+// db.get('user', {
 //     startKey: '05b90d56dd20b9e9'
-// }, function(err, data, header) {
+// }, function(err, header, data) {
 //     console.log(err);
 //     console.log(data);
 //     console.log(header);
 // });
 
 //search
-// o.get('user', {
+// db.get('user', {
 //     query: 'game:csgo',
 //     sort: 'value.name:asc'
-// }, function(err, data, header) {
+// }, function(err, header, data) {
 //     console.log(err);
 //     console.log(data);
 //     console.log(header);
 // });
 
-// o.get({
+// db.get({
 //     collection: 'user',
-//     key: '1',
+//     key: 1,
 //     opt: {
 //         query: 'game:csgo',
 //         sort: 'value.name:asc'
 //     }
-// }, function(err, data, header) {
+// }, function(err, header, data) {
 //     console.log(err);
 //     console.log(data);
 //     console.log(header);
 // });
 
 //post   
-// o.post('user', {
+// db.post('user', {
 //     name: 'ddo',
 //     age: 25,
 //     game: 'csgo, dota'
@@ -66,36 +66,36 @@ var o = orchestrate(process.env.ORCHESTRATE_TOKEN);
 //     console.log(header);
 // });
 
-// o.post('user', function(err, header) {
+// db.post('user', function(err, header) {
 //     console.log(err);
 //     console.log(header);
 // });
 
-// o.del('user', 1, function(err, header) {
+// db.del('user', 1, function(err, header) {
 //     console.log(err);
 //     console.log(header);
 // });
 
-// o.del('user', '05b8af95d6206eec', {
+// db.del('user', '05b8af95d6206eec', {
 //     force: true
 // }, function(err, header) {
 //     console.log(err);
 //     console.log(header);
 // });
 
-// o.del('user', function(err, header) {
+// db.del('user', function(err, header) {
 //     console.log(err);
 //     console.log(header);
 // });
 
-// o.del('user', {
+// db.del('user', {
 //     force: true
 // }, function(err, header) {
 //     console.log(err);
 //     console.log(header);
 // });
 
-// o.put('user', 2, {
+// db.put('user', 2, {
 //     name: 'ddooooooo',
 //     age: 25,
 //     game: 'csgo, dota, minecraftttt'
@@ -104,7 +104,7 @@ var o = orchestrate(process.env.ORCHESTRATE_TOKEN);
 //     console.log(header);
 // });
 
-// o.put('user', 4, {
+// db.put('user', 4, {
 //     name: 'ddoooo',
 //     age: 26
 // }, function(err, header) {
@@ -113,56 +113,56 @@ var o = orchestrate(process.env.ORCHESTRATE_TOKEN);
 // });
 
 //ref
-// o.ref.get('user', '05beb8ab4a20d872', 'c2844598ec6d42fc', function(err, data, header) {
+// db.ref.get('user', '05beb8ab4a20d872', 'c2844598ec6d42fc', function(err, header, data) {
 //     console.log(err);
 //     console.log(data);
 //     console.log(header);
 // });
 
-// o.ref.get('user', '05beb8ab4a20d872', function(err, data, header) {
+// db.ref.get('user', '05beb8ab4a20d872', function(err, header, data) {
 //     console.log(err);
 //     console.log(data);
 //     console.log(header);
 // });
 
-// o.ref.get('user', '05beb8ab4a20d872', {
+// db.ref.get('user', '05beb8ab4a20d872', {
 //     limit: 1
-// }, function(err, data, header) {
+// }, function(err, header, data) {
 //     console.log(err);
 //     console.log(data);
 //     console.log(header);
 // });
 
-// o.ref.get({
+// db.ref.get({
 //     collection: 'user',
 //     key: '05beb8ab4a20d872',
 //     opt: {
 //         limit: 1
 //     }
-// }, function(err, data, header) {
+// }, function(err, header, data) {
 //     console.log(err);
 //     console.log(data);
 //     console.log(header);
 // });
 
 //event
-// o.event.get('user', '1', 'login', function(err, data, header) {
+// db.event.get('user', 1, 'login', function(err, header, data) {
 //     console.log(err);
 //     console.log(data);
 //     console.log(header);
 // });
 
-// o.event.get('user', '1', 'login', {
+// db.event.get('user', 1, 'login', {
 //     // timestamp: 1413215674842,
 //     // ordinal: '05bf1e5dda086000',
 //     limit: 1
-// }, function(err, data, header) {
+// }, function(err, header, data) {
 //     console.log(err);
 //     console.log(data);
 //     console.log(header);
 // });
 
-// o.event.get({
+// db.event.get({
 //     collection: 'user',
 //     key: 1, 
 //     type: 'login',
@@ -170,43 +170,43 @@ var o = orchestrate(process.env.ORCHESTRATE_TOKEN);
 //         // timestamp: 1413211094000,
 //         limit: 1
 //     }
-// }, function(err, data, header) {
+// }, function(err, header, data) {
 //     console.log(err);
 //     console.log(data);
 //     console.log(header);
 // });
 
-// o.event.post('user', 1, 'login', function(err, header) {
+// db.event.post('user', 1, 'login', function(err, header) {
 //     console.log(err);
 //     console.log(header);
 // });
 
-// o.event.post('user', 1, 'login', {
+// db.event.post('user', 1, 'login', {
 //     ip: '3.3.3.3'
 // }, function(err, header) {
 //     console.log(err);
 //     console.log(header);
 // });
 
-// o.event.post('user', 1, 'login', (new Date()).getTime(), function(err, header) {
+// db.event.post('user', 1, 'login', (new Date()).getTime(), function(err, header) {
 //     console.log(err);
 //     console.log(header);
 // });
 
-// o.event.post('user', 1, 'login', (new Date()).getTime(), {
+// db.event.post('user', 1, 'login', (new Date()).getTime(), {
 //     login: '4.4.4.4'
 // }, function(err, header) {
 //     console.log(err);
 //     console.log(header);
 // });
 
-// o.event.del('user', '1', 'login', function(err, data, header) {
+// db.event.del('user', 1, 'login', function(err, header, data) {
 //     console.log(err);
 //     console.log(data);
 //     console.log(header);
 // });
 
-// o.event.del('user', '1', 'login', {
+// db.event.del('user', 1, 'login', {
 //     timestamp: 1413211094000,
 //     ordinal: '05bed877f0086000',
 //     purge: true
@@ -216,7 +216,7 @@ var o = orchestrate(process.env.ORCHESTRATE_TOKEN);
 //     console.log(header);
 // });
 
-// o.event.del({
+// db.event.del({
 //     collection: 'user',
 //     key: 1, 
 //     type: 'login',
@@ -229,7 +229,7 @@ var o = orchestrate(process.env.ORCHESTRATE_TOKEN);
 //     console.log(header);
 // });
 
-// o.event.put('user', 1, 'login', {
+// db.event.put('user', 1, 'login', {
 //     timestamp: 1413215674842,
 //     ordinal: '05bf1e5dda086000'
 // }, {
@@ -239,7 +239,7 @@ var o = orchestrate(process.env.ORCHESTRATE_TOKEN);
 //     console.log(header);
 // });
 
-// o.event.put({
+// db.event.put({
 //     collection: 'user',
 //     key: 1,
 //     type: 'login',
@@ -254,19 +254,19 @@ var o = orchestrate(process.env.ORCHESTRATE_TOKEN);
 // });
 
 //graph
-// o.graph.get('user', '1', 'like', function(err, header, data) {
+// db.graph.get('user', 1, 'like', function(err, header, data) {
 //     console.log(err);
 //     console.log(data);
 //     console.log(header);
 // });
 
-// o.graph.get('user', '1', ['like', 'relationship'], function(err, header, data) {
+// db.graph.get('user', 1, ['like', 'relationship'], function(err, header, data) {
 //     console.log(err);
 //     console.log(data);
 //     console.log(header);
 // });
 
-// o.graph.get('user', '1', ['like', 'relationship'], {
+// db.graph.get('user', 1, ['like', 'relationship'], {
 //     limit: 1
 // }, function(err, header, data) {
 //     console.log(err);
@@ -274,7 +274,7 @@ var o = orchestrate(process.env.ORCHESTRATE_TOKEN);
 //     console.log(header);
 // });
 
-// o.graph.get({
+// db.graph.get({
 //     collection: 'user',
 //     key: 1,
 //     kind: ['like', 'relationship']
@@ -284,7 +284,7 @@ var o = orchestrate(process.env.ORCHESTRATE_TOKEN);
 //     console.log(header);
 // });
 
-// o.graph.put({
+// db.graph.put({
 //     collection: 'user',
 //     key: 1
 // }, 'like', {
@@ -295,7 +295,7 @@ var o = orchestrate(process.env.ORCHESTRATE_TOKEN);
 //     console.log(header);
 // });
 
-// o.graph.put({
+// db.graph.put({
 //     from: {
 //         collection: 'user',
 //         key: 1
@@ -310,7 +310,7 @@ var o = orchestrate(process.env.ORCHESTRATE_TOKEN);
 //     console.log(header);
 // });
 
-// o.graph.del({
+// db.graph.del({
 //     collection: 'user',
 //     key: 1
 // }, 'like', {
@@ -323,7 +323,7 @@ var o = orchestrate(process.env.ORCHESTRATE_TOKEN);
 //     console.log(header);
 // });
 
-// o.graph.del({
+// db.graph.del({
 //     from: {
 //         collection: 'user',
 //         key: 1
