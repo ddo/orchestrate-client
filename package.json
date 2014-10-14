@@ -1,7 +1,7 @@
 {
   "name": "orchestrate-client",
-  "version": "0.0.1",
-  "description": "orchestrate.io client nodejs driver",
+  "version": "1.0.0",
+  "description": "orchestrate.io nodejs client",
   "main": "index.js",
   "scripts": {
     "test": "npm i && ./node_modules/.bin/mocha -t 10000",
