@@ -1,4 +1,5 @@
-orchestrate-native
+orchestrate-client
 ==================
 
-orchestrate.io native nodejs driver
+[orchestrate.io](http://orchestrate.io/) NodeJS client
+
