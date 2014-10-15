@@ -1,9 +1,9 @@
-orchestrate-client [![Build Status](https://travis-ci.org/ddo/orchestrate-client.svg?branch=master)](https://travis-ci.org/ddo/orchestrate-client)
+orchestrate-client [![Build Status](http://img.shields.io/travis/ddo/orchestrate-client.svg?style=flat-square)](https://travis-ci.org/ddo/orchestrate-client)
 ==================
 
 > [orchestrate.io](http://orchestrate.io/) NodeJS client
 
-[![NPM version](https://badge.fury.io/js/orchestrate-client.png)](http://badge.fury.io/js/orchestrate-client) [![Dependency Status](https://david-dm.org/ddo/orchestrate-client.png?theme=shields.io)](https://david-dm.org/ddo/orchestrate-client)
+[![NPM version](http://img.shields.io/npm/v/orchestrate-client.svg?style=flat-square)](https://www.npmjs.org/package/orchestrate-client) [![Dependency Status](http://img.shields.io/david/ddo/orchestrate-client.svg?style=flat-square)](https://david-dm.org/ddo/orchestrate-client)
 
 ##installation
 
